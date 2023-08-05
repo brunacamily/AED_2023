@@ -1,4 +1,4 @@
-//  ========================      VERSÃƒÆ’O FEITA EM CASA  /aceito no leercode/      ================================    //
+//  ========================      VERSÃO FEITA EM CASA  /aceito no leercode/      ================================    //
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -18,8 +18,8 @@ void Pop ( int *copos, int *amount );
 ====================
 Pop
  Recebe dois arrays de mesmo tamanho (3),
-o primeiro array guarda o indice da posiÃƒÂ§ÃƒÂ£o
-no segundo array que serÃƒÂ¡ decrementada.
+o primeiro array guarda o indice da posição
+no segundo array que será decrementada.
 ====================
 */
 
@@ -27,9 +27,9 @@ void Sort ( int *amount, int *copos );
 /*
 ====================
 Sort
- A funÃƒÂ§ÃƒÂ£o Pop chama a funÃƒÂ§ÃƒÂ£o Sort para
-que Sort coloque o indice da posiÃƒÂ§ÃƒÂ£o do array 
-(que serÃƒÂ¡ decremetado) com o menor conteudo
+ A função Pop chama a função Sort para
+que Sort coloque o indice da posição do array 
+(que será decremetado) com o menor conteudo
 no fim do array copos, e os indices dos dois 
 maiores conteudos do array amount 
 no inicio do array copos.
@@ -41,9 +41,9 @@ int main ( void ) {
 
     int *array, tam = 3, temp = 0;
     array = ( int* ) malloc ( sizeof ( int ) * tam );
-    array [ 0 ] = 5;
+    array [ 0 ] = 4;
     array [ 1 ] = 4;
-    array [ 2 ] = 4;
+    array [ 2 ] = 0;
    
     temp =  FillCups ( array, tam );
 
@@ -60,7 +60,8 @@ int FillCups ( int* amount, int amountSize ) {
     if ( amountSize != 3 )
     return -1;
 
-    int seconds = 0, teste = ( amount[ 0 ] + amount[ 1 ] + amount[ 2 ] ), *copos = ( int* ) calloc ( 3, sizeof ( int ) );
+    int seconds = 0, teste = ( amount[ 0 ] + amount[ 1 ] + amount[ 2 ] ),
+     *copos = ( int* ) calloc ( 3, sizeof ( int ) );
 
     while ( teste != 0 ) {
         seconds++ ;
@@ -86,7 +87,7 @@ void Pop( int *copos, int *amount ) {
     } else if ( amount [ copos [ 1 ] ] > 0 ) {
         amount [ copos [ 1 ] ] -- ;
     }
-    printf("-------------");
+
 }
 
 
@@ -115,8 +116,5 @@ void Sort ( int *amount, int *copos ) {
         copos [ 0 ] = 0;
         copos [ 1 ] = 1;
     }
-
-    printf("\nordem decres:%d,%d,%d.", amount[copos[0]], amount[copos[1]], amount[copos[2]]);
-
 
 }
