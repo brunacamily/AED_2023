@@ -14,26 +14,31 @@ int main (){
 
 }
 
-no* cria( ) {
-    no *novo = (no*)malloc(sizeof(no));
-    novo->dado = 0;
-    novo->pDir = NULL;
-    novo->pEsq = NULL;
-    return novo;
-    
+no* insere(no *p, int dado){
+    if (p == NULL)
+    {
+        no *a = (no*)malloc(sizeof(no));
+        a->dado = dado;
+        a->pEsq  = NULL;
+        a->pDir = NULL;
+        return a;
+    }else {
+        if(dado < p->dado)
+            p->pEsq = insere(p->pEsq,dado);
+        else 
+            p->pDir = insere(p->pDir,dado);
+        return p;        
+    }
 }
 
-void insere (no *p, int info){
-    no *aux = p;
-    if(aux->dado < info){
-        if(aux->pEsq == NULL){
 
-        }
-        aux = aux->pEsq;
-        
-    }else
+void imprime(no *p) {
+    if (p != NULL)
     {
-        
+        printf(" %d ", p->dado
+        );
+        imprime(p->pEsq);
+        imprime(p->pDir);
     }
-    
+    return;
 }
