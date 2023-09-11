@@ -1,3 +1,6 @@
+// exercício 226
+// Dado o valor rootde uma árvore binária, inverta a árvore e retorne sua raiz
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -11,6 +14,29 @@
   };
 
 typedef struct TreeNode TreeNode;
+TreeNode* invertTree(struct TreeNode* root);
+TreeNode* insere(TreeNode *p, int dado);
+void imprime(TreeNode *p);
+
+
+int main( )
+{
+    TreeNode *p = NULL;
+    
+    p = insere(p, 4);
+    p = insere(p, 2);
+    p = insere(p, 7);
+
+    imprime(p);
+
+    printf("\n");
+
+    p = invertTree(p);
+
+    imprime(p);
+
+    return 0;
+}
 
 TreeNode* invertTree(struct TreeNode* root){
     struct TreeNode *aux;
@@ -55,23 +81,4 @@ void imprime(TreeNode *p){
     }
 
     return;
-}
-
-int main( )
-{
-    TreeNode *p = NULL;
-    
-    p = insere(p, 4);
-    p = insere(p, 2);
-    p = insere(p, 7);
-
-    imprime(p);
-
-    printf("\n");
-
-    p = invertTree(p);
-
-    imprime(p);
-
-    return 0;
 }

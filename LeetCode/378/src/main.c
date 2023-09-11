@@ -1,4 +1,5 @@
 //exercicio 387 
+// Dada uma string s, encontre o primeiro caractere não repetitivo e retorne seu índice . Se não existir, retorne -1.
 
 #include <stdio.h>
 #include <string.h>

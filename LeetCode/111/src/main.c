@@ -1,3 +1,9 @@
+// exercício 111
+
+/* Dada uma árvore binária, encontre sua profundidade mínima.
+A profundidade mínima é o número de nós ao longo do caminho mais curto, do nó raiz até o nó folha mais próximo.
+Nota:  Uma folha é um nó sem filhos.
+*/
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -11,6 +17,32 @@
   };
 
 typedef struct TreeNode TreeNode;
+int minDepth(struct TreeNode* t);
+TreeNode* insere(TreeNode *p, int dado);
+void imprime(TreeNode *p);
+
+int main( )
+{
+    TreeNode *p = NULL;
+    int profMinima = 0;
+    
+    p = insere(p, 3);
+    p = insere(p, 9);
+    p = insere(p, 20);
+    p = insere(p, 15);
+    p = insere(p, 7);
+    p = insere(p, 2);
+
+    imprime(p);
+
+    printf("\n");
+
+    profMinima = minDepth(p);
+
+    printf("\nteste: %d", profMinima);
+
+    return 0;
+}
 
 int minDepth(struct TreeNode* t){
     int dir,esq;
@@ -63,27 +95,4 @@ void imprime(TreeNode *p){
     }
 
     return;
-}
-
-int main( )
-{
-    TreeNode *p = NULL;
-    int profMinima = 0;
-    
-    p = insere(p, 3);
-    p = insere(p, 9);
-    p = insere(p, 20);
-    p = insere(p, 15);
-    p = insere(p, 7);
-    p = insere(p, 2);
-
-    imprime(p);
-
-    printf("\n");
-
-    profMinima = minDepth(p);
-
-    printf("\nteste: %d", profMinima);
-
-    return 0;
 }

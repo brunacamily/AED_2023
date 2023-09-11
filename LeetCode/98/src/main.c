@@ -1,3 +1,17 @@
+/* Dado o valor rootde uma árvore binária, determine se ela é uma árvore de pesquisa binária (BST) válida .
+
+Um BST válido é definido da seguinte forma:
+
+A esquerda
+subárvore
+de um nó contém apenas nós com chaves menores que a chave do nó.
+A subárvore direita de um nó contém apenas nós com chaves maiores que a chave do nó.
+As subárvores esquerda e direita também devem ser árvores de pesquisa binária.    
+
+
+sem submit - funciona p/ 79 casos de 83 */
+
+
 #include <stdio.h>
 #include <stdbool.h>
 #include <stdlib.h>

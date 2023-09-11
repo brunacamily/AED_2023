@@ -38,7 +38,8 @@ int findSecondMinimumValue(struct TreeNode* root){
     if(root == NULL)
         return -1;
     else {
-        return Fmenor(root, root->val, max(root->left->val, root->right->val));
+        return Fmenor(root, root->val,
+         max(root->left->val, root->right->val));
     }
 }
 
@@ -65,14 +66,17 @@ int Fmenor(struct TreeNode* root, int menor, int menor2){
 
         if (menor > root->val ){
             menor = root->val;
-            return min(Fmenor(root->left, menor, menor2), Fmenor(root->right, menor, menor2));
+            return min(Fmenor(root->left, menor, menor2),
+             Fmenor(root->right, menor, menor2));
 
         }else if(menor2 > root->val){
            menor2 = root->val; 
-           return min(Fmenor(root->left, menor, menor2), Fmenor(root->right, menor, menor2));
+           return min(Fmenor(root->left, menor, menor2),
+            Fmenor(root->right, menor, menor2));
 
         }else{
-            return min(Fmenor(root->left, menor, menor2), Fmenor(root->right, menor, menor2));;
+            return min(Fmenor(root->left, menor, menor2),
+             Fmenor(root->right, menor, menor2));;
         }
     }else{
         return menor;
