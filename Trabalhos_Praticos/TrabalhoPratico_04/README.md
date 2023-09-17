@@ -20,10 +20,10 @@
 
 
 
-**Código feito em casa:** Código é aceito pelo LeetCode. Usei duas funções Quicksort(põe em ordem o array de arrays, matriz) e Merge(retorna uma matriz sem nenhuma sobreposição de intervalos apartir da matriz passada como parâmetro), nesta versão logo no inicio já coloco o primeiro intervalo na matriz retorno depois comparo com o próximo intervalo em caso de sobreposição ajusto o fim do intervalo do retorno, caso não haja sobreposição insiro o novo intervalo no retorno e isso se repete para todos os intervalos do arrays passado como parâmetro.
+**Código feito em casa:** Código é aceito pelo LeetCode. Usei duas funções para resolver o exercício: Quicksort(põe em ordem o array de arrays, matriz) e Merge(retorna uma matriz sem nenhuma sobreposição de intervalos, a partir da matriz passada como parâmetro), nesta versão logo no inicio já coloco o primeiro intervalo na matriz retorno, depois comparo com o próximo intervalo em caso de sobreposição ajusto o fim do intervalo do retorno, caso não haja sobreposição insiro o novo intervalo no retorno e isso se repete para todos os intervalos do arrays passado como parâmetro.
 
 
-sobre a complexibilidade o código tem 3 funções: Quicksort, Merge e Zera1( libera a memória toda que fooi alocada )
+sobre a complexibilidade o código tem 3 funções: Quicksort, Merge e Zera1( libera toda a memória que foi alocada )
 
 
 Quicksort: O(n log n);
@@ -43,34 +43,56 @@ O(n log n) + O(n) + O(m) = O(n log n);
 **TESTE 01 - Resultado esperado:**
 
 
+
+
 Entrada: [ [4, 5], [1, 4] ]
+
+
 
 
 Saída esperada: [1, 5]
 
 
+
+
 Saída obtida: [1, 5]
+
+
 
 
 **TESTE 02 - Resultado esperado:**
 
 
+
+
 Entrada: [ [2, 3], [4, 5], [6, 7], [8, 9], [1, 10] ]
+
+
 
 
 Saída esperada: [1, 10]
 
 
+
+
 Saída obtida: [1, 10]
+
+
 
 
 **TESTE 03 - Resultado errado:** 
 
 
+
+
 Entrada: [ [1, 3], [2, 6], [8, 10], [15, 18] ]
 
 
+
+
 Saída esperada: [ [1, 6], [8, 10], [15, 18] ]
+
+
 
 
 Saída obtida: [ [1, 6], [8, 10], [15, 18] ]
