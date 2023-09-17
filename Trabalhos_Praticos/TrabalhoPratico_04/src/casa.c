@@ -53,12 +53,13 @@ int main( ) {
    printf("%d ", saida[0][0]);
    printf("%d ", saida[0][1]);
 
-    free ( tamSaida );
+   
+    free ( ultimoLido );
     free ( inter1 );
     free ( inter2 );
-    free ( interv );
+    free(interv);
     zera1 ( col, 1 );
-    zera1 ( saida,1 );
+    zera1(saida, 1);
 
     return 0;
 }
@@ -96,6 +97,7 @@ void Quicksort ( int **data, int inicio, int fim ) {
         Quicksort ( data, inicio, dir );
     if ( esq < fim )
         Quicksort ( data, esq, fim );
+       
 }
 
 
