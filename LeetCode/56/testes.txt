@@ -1,0 +1,9 @@
+int **saida  = (int**)malloc(sizeof(int*)), *tamSaida = (int*)malloc(sizeof(int)), *ultimoLido = NULL, i =0 ;
+    int **interv = (int**)malloc(sizeof(int*)*5), **col=(int**)malloc(sizeof(int*)); 
+
+    int *inter1 = (int*)malloc(sizeof(int)*2), 
+        *inter2 = (int*)malloc(sizeof(int)*2),
+        *inter3 = (int*)malloc(sizeof(int)*2),
+        *inter4 = (int*)malloc(sizeof(int)*2),
+        *inter5 = (int*)malloc(sizeof(int)*2);
+    tamSaida = &i;
