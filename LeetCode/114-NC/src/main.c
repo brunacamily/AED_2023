@@ -1,4 +1,7 @@
 /*
+
+                    NÃO CONCLUIDO
+
 Dado o formato rootde uma árvore binária, achate a árvore em uma "lista vinculada":
 
 A "lista vinculada" deve usar a mesma Tree struct TreeNodeclasse onde o right ponteiro filho aponta para o próximo nó da lista e 
@@ -82,6 +85,8 @@ void Zera (  struct TreeNode *p ) {
 }
 
 
+
+/*
 struct TreeNode* insereEsq(struct TreeNode* antiga, struct TreeNode *p){
     if (antiga != NULL && p==NULL)
     {
@@ -142,3 +147,5 @@ void flatten(struct TreeNode* root){
     free(root);
     root=nova;
 }
+
+*/

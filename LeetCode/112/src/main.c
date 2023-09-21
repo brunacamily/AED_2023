@@ -23,7 +23,7 @@ int main()
     p = insere(p, 3);
 
     imprime(p);
-    bool teste = hasPathSum(p, 7);
+    bool teste = hasPathSum(p, 5);
 
     if(teste == true)
             printf("VERDADEIRO!");

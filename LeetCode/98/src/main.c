@@ -1,4 +1,8 @@
-/* Dado o valor rootde uma árvore binária, determine se ela é uma árvore de pesquisa binária (BST) válida .
+/* 
+       ####     Funciona para 79 de 83 casos        ####
+       
+
+Dado o valor rootde uma árvore binária, determine se ela é uma árvore de pesquisa binária (BST) válida .
 
 Um BST válido é definido da seguinte forma:
 
@@ -9,7 +13,7 @@ A subárvore direita de um nó contém apenas nós com chaves maiores que a chav
 As subárvores esquerda e direita também devem ser árvores de pesquisa binária.    
 
 
-sem submit - funciona p/ 79 casos de 83 */
+ */
 
 
 #include <stdio.h>
@@ -28,9 +32,10 @@ sem submit - funciona p/ 79 casos de 83 */
 typedef struct TreeNode TreeNode;
 TreeNode* insere(TreeNode *p, int dado);
 void imprime(TreeNode *p);
-bool testMenor(struct TreeNode* root, int raiz);
-bool testMaior(struct TreeNode* root, int raiz);
+
+bool teste1(struct TreeNode* root, int menor, int maior);
 bool isValidBST(struct TreeNode* root);
+
 
 int main( )
 {
@@ -50,6 +55,7 @@ int main( )
     }else{
         printf("\nFalso");
     }
+
 
     return 0;
 }
@@ -80,6 +86,8 @@ void imprime(TreeNode *p) {
     }
     return;
 }
+
+
 bool testMenor(struct TreeNode* root, int raiz){
     if(root == NULL)
         return true;
@@ -109,3 +117,4 @@ bool testMaior(struct TreeNode* root, int raiz){
 bool isValidBST(struct TreeNode* root) {
     return testMenor(root->left, root->val) && testMaior(root->right, root->val);
 };
+

@@ -51,13 +51,11 @@ int main( ) {
    saida = Merge ( interv, 2, ultimoLido, tamSaida, col );
 
    printf("%d ", saida[0][0]);
-   printf("%d ", saida[0][1]);
+    printf("%d ", saida[0][1]);
 
    
     free ( ultimoLido );
-    free ( inter1 );
-    free ( inter2 );
-    free(interv);
+    zera1( interv, 2 );
     zera1 ( col, 1 );
     zera1(saida, 1);
 
